@@ -1,0 +1,23 @@
+/* Write your code here. */
+.navbar {
+  background-color: #6a59ff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.score-text {
+  margin-left: 20px;
+}

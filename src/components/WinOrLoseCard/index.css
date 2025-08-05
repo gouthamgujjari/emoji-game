@@ -1,0 +1,91 @@
+.result-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
+}
+
+.text-container {
+  flex: 1;
+  text-align: center;
+  padding-right: 20px;
+  min-width: 300px;
+}
+
+.result-img {
+  height: 280px;
+  width: auto;
+  flex: 1;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.heading {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+  align-self: auto;
+}
+
+.bestscore {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 10px;
+  align-self: auto;
+  font-weight: bold;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: auto;
+  gap: 10px;
+}
+
+.score {
+  font-size: 26px;
+  font-weight: bold;
+  color: #6a59ff;
+}
+
+.play-again-btn {
+  background-color: #6a59ff;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-again-btn:hover {
+  background-color: #4b3bcc;
+}
+
+@media screen and (max-width: 768px) {
+  .result-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-container {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .scoreContainer {
+    align-items: center;
+  }
+}
