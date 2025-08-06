@@ -10,7 +10,7 @@ const EmojiCard = ({emojiDetails, onClickEmoji}) => {
 
   return (
     <li className="emoji-item">
-      <button type="button" className="emoji-btn" onClick={handleClick}>
+      <button type="button" className="emoji-btn button" onClick={handleClick}>
         <img src={emojiUrl} alt={emojiName} className="emoji-img" />
       </button>
     </li>
