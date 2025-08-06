@@ -1,16 +1,31 @@
+/* Write your code here. */
+@keyframes animate-gradient-result-card {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .result-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: animate-gradient-result-card 10s ease infinite;
   border-radius: 12px;
   padding: 40px;
   max-width: 800px;
   margin: 40px auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   flex-wrap: wrap;
+  color: white;
 }
-
 .text-container {
   flex: 1;
   text-align: center;
@@ -19,7 +34,7 @@
 }
 
 .result-img {
-  height: 280px;
+  height: 250px;
   width: auto;
   flex: 1;
   max-width: 400px;
@@ -28,48 +43,99 @@
 
 .heading {
   font-size: 36px;
-  color: #2c3e50;
+  color: #ffc107;
   margin-bottom: 10px;
   font-weight: bold;
-  align-self: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .bestscore {
   font-size: 20px;
-  color: #34495e;
+  color: #000000;
   margin-bottom: 10px;
-  align-self: auto;
   font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .scoreContainer {
   display: flex;
   flex-direction: column;
-  align-items: auto;
+  align-items: center;
   gap: 10px;
+  margin-top: 2px;
 }
 
 .score {
   font-size: 26px;
   font-weight: bold;
-  color: #6a59ff;
+  color: #000000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 1px;
 }
-
 .play-again-btn {
-  background-color: #6a59ff;
-  color: white;
+  background-color: #ffc107;
+  color: #333;
   border: none;
   padding: 10px 22px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .play-again-btn:hover {
-  background-color: #4b3bcc;
+  background-color: #ffca2c;
 }
+.btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-width: 150px;
+  max-width: 200px;
+  z-index: 1;
+  padding-left: 40px;
+}
+
+.neon-pulse {
+  background: #000;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #0ff;
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.neon-pulse::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .result-card {
@@ -77,14 +143,12 @@
     align-items: center;
     text-align: center;
   }
-
   .text-container {
     padding-right: 0;
     text-align: center;
     margin-bottom: 20px;
     align-items: center;
   }
-
   .scoreContainer {
     align-items: center;
   }

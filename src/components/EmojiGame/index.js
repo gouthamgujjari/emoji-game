@@ -1,3 +1,4 @@
+/* Write your code here. */
 import {Component} from 'react'
 import NavBar from '../NavBar'
 import EmojiCard from '../EmojiCard'

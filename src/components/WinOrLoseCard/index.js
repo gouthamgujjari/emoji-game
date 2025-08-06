@@ -1,6 +1,11 @@
+/* Write your code here. */
 import './index.css'
+import Confetti from 'react-confetti'
+import {useWindowSize} from 'react-use'
 
 const WinOrLoseCard = ({isWon, score, totalEmojis, onClickPlayAgain}) => {
+  const {width, height} = useWindowSize()
+
   const resultImg = isWon
     ? 'https://assets.ccbp.in/frontend/react-js/won-game-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/lose-game-img.png'
@@ -10,6 +15,8 @@ const WinOrLoseCard = ({isWon, score, totalEmojis, onClickPlayAgain}) => {
 
   return (
     <div className="result-card">
+      {isWon && <Confetti width={width} height={height} recycle={false} />}
+
       <div className="text-container">
         <h1 className="heading">{resultText}</h1>
         <p className="bestscore">{scoreText}</p>
@@ -19,7 +26,7 @@ const WinOrLoseCard = ({isWon, score, totalEmojis, onClickPlayAgain}) => {
           </p>
           <button
             type="button"
-            className="play-again-btn"
+            className="btn neon-pulse"
             onClick={onClickPlayAgain}
           >
             Play Again
