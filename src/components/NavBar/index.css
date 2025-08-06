@@ -6,11 +6,13 @@
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
+  flex-wrap: wrap;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -20,4 +22,23 @@
 
 .score-text {
   margin-left: 20px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .score-text {
+    margin-left: 0;
+    font-size: 16px;
+  }
 }

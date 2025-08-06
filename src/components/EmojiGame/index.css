@@ -24,3 +24,25 @@
   max-width: 1140px;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .emoji-game-container {
+    padding: 16px;
+  }
+
+  .emoji-list {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .emoji-game-container {
+    padding: 12px;
+    flex-direction: column;
+  }
+
+  .emoji-list {
+    gap: 10px;
+  }
+}
